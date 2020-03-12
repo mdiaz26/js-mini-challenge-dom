@@ -26,7 +26,9 @@ Figure out what you need to change to give Javascript access to the `h1#header` 
 
 **YOUR NOTES**
 ```
-
+The variable was being declared before the HTML was rendered. You could wrap everything into an
+event listener for DOMContentLoaded. I instead edited the HTML to move the javascript below the page
+render.
 ```
 
 ## Deliverable 2
@@ -35,7 +37,7 @@ Now that you have access to the `h1#header` element, use Javascript to change th
 
 **YOUR NOTES**
 ```
-
+Use .style and .color to change the property of the element to "red"
 ```
 
 ## Deliverable 3
@@ -57,7 +59,13 @@ Create a DOM element that looks like this for each player and append it to the `
 
 **YOUR NOTES**
 ```
+Editing the DOM comes down to four steps:
+1. create an element
+2. add contents to the element
+3. find the element you want to append it to
+4. append it
 
+So I did all four, creating a <p>, adding HTML, finding the player-container div, then appending the new element. I used backtics and interpolation to get the data into the elements.
 ```
 
 ## Deliverable 4
@@ -68,5 +76,8 @@ Hint: You can use `querySelector` with [CSS Attribute Selectors](https://develop
 
 **YOUR NOTES**
 ```
+Finding an element by datatype is always tricky but I'm getting better at it. The syntax is:
+document.querySelector(`[data-{WHATEVER YOUR DATATYPE IS CALLED}="WHATEVER YOU'RE LOOKING FOR"]`)
 
+I found the element and then used remove() to remove it!
 ```
